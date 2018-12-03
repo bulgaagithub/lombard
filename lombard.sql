@@ -96,3 +96,14 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+CREATE TABLE `fos_user` (
+  `id` int(11) primary key auto_increment,
+  `username` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `username_canonical` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `email_canonical` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `last_login` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
